@@ -12,16 +12,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: List Contents of the Directory
-        run: |
-          ls -R /Users/runner/work/new-app/new-app
-
-      - name: Install Java
+      - name: Install Java and Gradle
         uses: actions/setup-java@v3
         with:
           java-version: 17
           distribution: adopt
-          cache: gradle
+          gradle-version: 7.3.3
 
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@v1
