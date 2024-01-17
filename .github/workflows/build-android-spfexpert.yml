@@ -12,6 +12,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: List Contents of the Directory
+        run: |
+          ls -R /Users/runner/work/new-app/new-app
+
       - name: Install Java
         uses: actions/setup-java@v3
         with:
